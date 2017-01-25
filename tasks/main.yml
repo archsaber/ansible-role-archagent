@@ -1,0 +1,38 @@
+# vim:ft=ansible:
+
+# Author : Ashish Gaurav
+# Email  : ashish@archsaber.com
+#
+---
+
+- name: Ensure archsaber src directory
+  file:
+    path: /usr/local/src/archsaber/
+    state: directory
+    mode: 0755
+
+- name: Get the latest installer script
+  become: yes
+  get_url:
+    dest="/usr/local/src/archsaber/"
+    url="http://bin.archsaber.com/install/archagentctl"
+    checksum="{{archagentctl_checksum}}"
+    mode="0744"
+
+- name: run the script
+  become: yes
+  command: /usr/local/src/archsaber/archagentctl -i "{{archsaber_license}}"
+
+- name: sync the data config
+  template:
+    src: data.json.j2
+    dest: /etc/opt/archsaber/data.json
+    mode: 0644
+  when: archagent_sync_data_config
+
+- name: sync the metric config
+  template:
+    src: metric.json.j2
+    dest: /etc/opt/archsaber/metrics.json
+    mode: 0644
+  when: archagent_sync_metric_config

@@ -1,0 +1,16 @@
+# vim:ft=ansible:
+
+# Author : Ashish Gaurav
+# Email  : ashish@archsaber.com
+#
+---
+
+- name: restart archagent
+  service:
+    name: archagent
+    state: restarted
+
+- name: stop archagent
+  service:
+    name: archagent
+    state: stopped

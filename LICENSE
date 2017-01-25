@@ -1,37 +1,4 @@
-ansible-archagent
-=========
-
-[ansible](http://docs.ansible.com/ansible/) module for the [ArchSaber](http://archsaber.com) monitoring agent.
-
-
-Usage
---------------
-
-Download the latest [release](https://github.com/archsaber/ansible-role-archagent/releases/latest) and copy the extracted content to role directory of your anisble. Rename the directory `ansible-role-archagent` to `archagent`. Change the code & templates & use the role as per your preference.
-
-Or, install it using ansible galaxy as Below
-
-``` bash
-ansible-galaxy install ansible-role-archagent
-```
-
-Role Variables
---------------
-
-The license key can be set in the role's `default/main.yml` as below:
-
-``` yml
-archsaber_license: yourlicensekey
-```
-
-You can also use the `archagent_sync_data_config`, `archagent_sync_metric_config` variables along with their respective to sync the `archagent` config files.
-
-License
--------
-
-BSD
-
-Copyright 2017 Omnisaber Labs Pvt. Ltd.
+Copyright 2017 Omnisaber Labs Pvt Ltd.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
