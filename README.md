@@ -1,6 +1,8 @@
 ansible-archagent
 =========
 
+[![Build Status](https://travis-ci.org/archsaber/ansible-role-archagent.svg?branch=master)](https://travis-ci.org/archsaber/ansible-role-archagent)
+
 [ansible](http://docs.ansible.com/ansible/) module for the [ArchSaber](http://archsaber.com) monitoring agent.
 
 
