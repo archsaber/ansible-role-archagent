@@ -16,8 +16,8 @@
   get_url:
     dest="/usr/local/src/archsaber/"
     url="http://bin.archsaber.com/install/archagentctl"
-    checksum="{{archagentctl_checksum}}"
     mode="0744"
+    # checksum="{{archagentctl_checksum}}"
 
 - name: run the script
   become: yes
