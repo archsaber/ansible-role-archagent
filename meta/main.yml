@@ -27,6 +27,7 @@ galaxy_info:
         - 2013.09
         - 2016.03
         - 2016.09
+        - 2017.03
     - name: ArchLinux
       versions:
         - all
@@ -51,6 +52,7 @@ galaxy_info:
         - yakkety
     - name: Debian
       versions:
+        - stretch
         - jessie
         - lenny
         - squeeze
