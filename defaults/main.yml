@@ -8,9 +8,9 @@
 # the license key can be found in your accounts page here https://app.archsaber.com/#/app/profile
 archsaber_license: yourlicensekey
 
-archagentctl_checksum: "sha256:f4eb917b018d6abc92c9003a9db5d9be25949f55a8d8d119edada7a404f37079"
-
 archagent_sync_data_config: false
 archagent_sync_metric_config: false
 
 archagent_rule_conf_name: default-rule
+archagent_channel_conf_name: default-channel
+

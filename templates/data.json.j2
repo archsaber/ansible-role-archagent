@@ -1,30 +1,78 @@
 {
+    "disk": {
+        "exclude_disks" : []
+    },
+    "network": {
+        "exclude_interfaces" : []
+    },
+    "process_monitor": {
+        "process_names": []
+    },
     "postgres": {
         "port": 5432,
-        "database": "",
-        "username": "",
-        "password": ""
+        "databases": [],
+        "username": "archagent",
+        "password": "archagent"
     },
+    "awsrds": [
+        {
+            "name": "pg-1",
+            "url": "",
+            "port": 5432,
+            "username": "",
+            "password": "",
+            "databases": [],
+            "type": "postgres"
+        },
+        {
+            "name": "mysql-1",
+            "url": "",
+            "port": 3306,
+            "username": "",
+            "password": "",
+            "databases": [],
+            "type": "mysql"
+        }
+    ],
+    "awsredis": [
+        {
+            "endpoint": "",
+            "port": 6379,
+            "password": ""
+        },
+        {
+            "endpoint": "",
+            "port": 6378,
+            "password": ""
+        }
+    ],
+
     "aerospike": {
         "port": 3000
     },
     "rethinkdb": {
         "database": "rethinkdb",
         "port": 28015,
-        "username": "admin",
-        "password": "admin"
-    },
-    "redis": {
-        "port": 6379,
+        "username": "",
         "password": ""
     },
+    "redisMulti": [
+        {
+            "port": 6379,
+            "password": ""
+        },
+        {
+            "port": 6378,
+            "password": ""
+        }
+    ],
     "memcached": {
         "port": 11211
     },
     "mysql": {
         "port": 3306,
-        "username": "",
-        "password": ""
+        "username": "archagent",
+        "password": "archagent"
     },
     "elasticsearch": {
         "port": 9200
@@ -40,20 +88,19 @@
         "path": "/nginx_status"
     },
     "haproxy": {
-        "port" : 1936,
-        "path" : "/haproxy_stats",
-        "username": "",
-        "password": ""
+        "socket_path" : "unix:///run/haproxy/admin.sock",
+        "exclude_frontend" : [],
+        "exclude_backend": []
     },
     "mongodb": {
         "port": 27017,
-        "username" : "",
-        "password": ""
+        "username" : "archagent",
+        "password": "archagent"
     },
     "rabbitmq" : {
         "port" : 15672,
-        "username" : "",
-        "password" : ""
+        "username" : "guest",
+        "password" : "guest"
     },
     "nsqd": {
         "port" : 4151

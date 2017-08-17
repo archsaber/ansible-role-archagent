@@ -14,10 +14,9 @@
 - name: Get the latest installer script
   become: yes
   get_url:
-    dest="/usr/local/src/archsaber/"
-    url="http://bin.archsaber.com/install/archagentctl"
-    mode="0744"
-    # checksum="{{archagentctl_checksum}}"
+    dest: /usr/local/src/archsaber/
+    url: https://bin.archsaber.com/install/archagentctl
+    mode: 0744
 
 - name: run the script
   become: yes
@@ -29,6 +28,8 @@
     dest: /etc/opt/archsaber/data.json
     mode: 0644
   when: archagent_sync_data_config
+  notify:
+    - restart archagent
 
 - name: sync the metric config
   template:
@@ -36,3 +37,5 @@
     dest: /etc/opt/archsaber/metrics.json
     mode: 0644
   when: archagent_sync_metric_config
+  notify:
+    - restart archagent
