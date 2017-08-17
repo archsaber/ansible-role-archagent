@@ -6,10 +6,12 @@
 ---
 
 - name: Ensure archsaber src directory
+  become: yes
   file:
     path: /usr/local/src/archsaber/
     state: directory
     mode: 0755
+
 
 - name: Get the latest installer script
   become: yes
@@ -18,9 +20,21 @@
     url: https://bin.archsaber.com/install/archagentctl
     mode: 0744
 
+- name: Uninstall existing archagent
+  command: /usr/local/src/archsaber/archagentctl -u
+  when: archsaber_agent_force_reinstall  == true
+
+
+
+- name: check for ArchAgent installation
+  stat: path="/etc/opt/archsaber/license.json"
+  register: result_archagent_installation
+
+
 - name: run the script
   become: yes
   command: /usr/local/src/archsaber/archagentctl -i "{{archsaber_license}}"
+  when: result_archagent_installation.stat.exists == false
 
 - name: sync the data config
   template:
@@ -39,3 +53,8 @@
   when: archagent_sync_metric_config
   notify:
     - restart archagent
+
+- name: Ensure archagent is running
+  service:
+    name: archagent
+    state: started

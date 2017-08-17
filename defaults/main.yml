@@ -6,6 +6,7 @@
 
 
 # the license key can be found in your accounts page here https://app.archsaber.com/#/app/profile
+archsaber_agent_force_reinstall: false
 archsaber_license: yourlicensekey
 
 archagent_sync_data_config: false
@@ -14,5 +15,5 @@ archagent_sync_metric_config: false
 archagent_rule_conf_name: default-rule
 archagent_channel_conf_name: default-channel
 
-archagent_metric_conf_template: metric.json.j2
+archagent_metric_conf_template: metrics.json.j2
 
