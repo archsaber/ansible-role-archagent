@@ -33,7 +33,7 @@
 
 - name: sync the metric config
   template:
-    src: metric.json.j2
+    src: "{{archagent_metric_conf_template}}"
     dest: /etc/opt/archsaber/metrics.json
     mode: 0644
   when: archagent_sync_metric_config
