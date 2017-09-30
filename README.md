@@ -14,7 +14,7 @@ Download the latest [release](https://github.com/archsaber/ansible-role-archagen
 Or, install it using ansible galaxy as Below
 
 ``` bash
-ansible-galaxy install ansible-role-archagent
+ansible-galaxy install archsaber.archagent
 ```
 
 Role Variables
