@@ -15,5 +15,7 @@ archagent_sync_metric_config: false
 archagent_rule_conf_name: default-rule
 archagent_channel_conf_name: default-channel
 
+archagent_data_conf_template: data.json.j2
+archagent_aws_conf_template: aws.json.j2
 archagent_metric_conf_template: metrics.json.j2
 

@@ -20,13 +20,16 @@ ansible-galaxy install ansible-role-archagent
 Role Variables
 --------------
 
-The license key can be set in the role's `default/main.yml` as below:
+The license key is needed and can be set in the role's `default/main.yml` as below:
 
 ``` yml
 archsaber_license: yourlicensekey
 ```
 
-You can also use the `archagent_sync_data_config`, `archagent_sync_metric_config` variables along with their respective to sync the `archagent` config files.
+
+
+You can also use the `archagent_sync_data_config`, `archagent_sync_metric_config` variables along with their respective templates to sync the `archagent` config files (`data.json` & `metrics.json`).
+
 
 License
 -------
