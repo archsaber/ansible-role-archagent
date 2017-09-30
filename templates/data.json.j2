@@ -2,19 +2,19 @@
     "disk": {
         "exclude_disks" : []
     },
-    "network": {
-        "exclude_interfaces" : []
-    },
-    "process_monitor": {
-        "process_names": []
-    },
-    "postgres": {
-        "port": 5432,
-        "databases": [],
-        "username": "archagent",
-        "password": "archagent"
-    },
-    "awsrds": [
+        "network": {
+            "exclude_interfaces" : []
+        },
+        "process_monitor": {
+            "process_names": []
+        },
+        "postgres": {
+            "port": 5432,
+            "databases": [],
+            "username": "archagent",
+            "password": "archagent"
+        },
+        "awsrds": [
         {
             "name": "pg-1",
             "url": "",
@@ -33,8 +33,8 @@
             "databases": [],
             "type": "mysql"
         }
-    ],
-    "awsredis": [
+        ],
+        "awsredis": [
         {
             "endpoint": "",
             "port": 6379,
@@ -45,18 +45,18 @@
             "port": 6378,
             "password": ""
         }
-    ],
+        ],
 
-    "aerospike": {
-        "port": 3000
-    },
-    "rethinkdb": {
-        "database": "rethinkdb",
-        "port": 28015,
-        "username": "",
-        "password": ""
-    },
-    "redisMulti": [
+        "aerospike": {
+            "port": 3000
+        },
+        "rethinkdb": {
+            "database": "rethinkdb",
+            "port": 28015,
+            "username": "",
+            "password": ""
+        },
+        "redisMulti": [
         {
             "port": 6379,
             "password": ""
@@ -65,49 +65,57 @@
             "port": 6378,
             "password": ""
         }
-    ],
-    "memcached": {
-        "port": 11211
-    },
-    "mysql": {
-        "port": 3306,
-        "username": "archagent",
-        "password": "archagent"
-    },
-    "elasticsearch": {
-        "port": 9200
-    },
-    "apache": {
-        "port": 80,
-        "path": "/server-status?auto",
-        "username": "",
-        "password" : ""
-    },
-    "nginx": {
-        "port": 80,
-        "path": "/nginx_status"
-    },
-    "haproxy": {
-        "socket_path" : "unix:///run/haproxy/admin.sock",
-        "exclude_frontend" : [],
-        "exclude_backend": []
-    },
-    "mongodb": {
-        "port": 27017,
-        "username" : "archagent",
-        "password": "archagent"
-    },
-    "rabbitmq" : {
-        "port" : 15672,
-        "username" : "guest",
-        "password" : "guest"
-    },
-    "nsqd": {
-        "port" : 4151
-    },
-    "cassandra": {
-        "port" : 8778,
-        "username": "",
-        "password": ""
-    }
+        ],
+        "memcached": {
+            "port": 11211
+        },
+        "mysql": {
+            "port": 3306,
+            "username": "archagent",
+            "password": "archagent"
+        },
+        "elasticsearch": {
+            "port": 9200
+        },
+        "apache": {
+            "port": 80,
+            "path": "/server-status?auto",
+            "username": "",
+            "password" : ""
+        },
+        "nginx": {
+            "port": 80,
+            "path": "/nginx_status"
+        },
+        "haproxy": {
+            "socket_path" : "unix:///run/haproxy/admin.sock",
+            "exclude_frontend" : [],
+            "exclude_backend": []
+        },
+        "mongodb": {
+            "port": 27017,
+            "username" : "archagent",
+            "password": "archagent"
+        },
+        "rabbitmq" : {
+            "port" : 15672,
+            "username" : "guest",
+            "password" : "guest"
+        },
+        "nsqd": {
+            "port" : 4151
+        },
+        "cassandra": {
+            "port" : 8778,
+            "username": "",
+            "password": ""
+        },
+        "kafka": {
+            "port": 8778,
+            "username": "",
+            "password": ""
+        },
+        "zookeeper": {
+            "port": 2181
+        }
 }
