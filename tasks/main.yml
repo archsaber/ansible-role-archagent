@@ -65,6 +65,7 @@
 
 
 - name: Ensure archagent is running
+  become: yes
   service:
     name: archagent
     state: started
