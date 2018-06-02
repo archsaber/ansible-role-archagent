@@ -11,6 +11,7 @@ archsaber_license: yourlicensekey
 
 archagent_sync_data_config: false
 archagent_sync_metric_config: false
+archagent_sync_tracer_config: false
 
 archagent_rule_conf_name: default-rule
 archagent_channel_conf_name: default-channel
@@ -18,4 +19,5 @@ archagent_channel_conf_name: default-channel
 archagent_data_conf_template: data.json.j2
 archagent_aws_conf_template: aws.json.j2
 archagent_metric_conf_template: metrics.json.j2
+archagent_tracer_conf_template: archsaber-trace-agent.json.j2
 

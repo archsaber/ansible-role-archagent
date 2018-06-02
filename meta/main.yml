@@ -27,6 +27,9 @@ galaxy_info:
         - 2013.09
         - 2016.03
         - 2016.09
+        - 2017.03
+        - 2017.09
+        - 2018.03
     - name: ArchLinux
       versions:
         - all
@@ -49,6 +52,9 @@ galaxy_info:
         - wily
         - xenial
         - yakkety
+        - zesty
+        - artful
+        - bionic
     - name: Debian
       versions:
         - stretch

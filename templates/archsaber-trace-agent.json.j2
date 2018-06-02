@@ -1,0 +1,29 @@
+{
+  "dd-server": {
+    "enabled": "True",
+    "host-port": "0.0.0.0:8126",
+    "extra-sample-rate": 1.0
+  },
+  "collector": {
+    "host-port": "https://traces.archsaber.com/api/traces?format=jaeger.thrift"
+  },
+  "processor": {
+    "zipkin-compact": {
+      "server-host-port": "localhost:5775"
+    },
+    "jaeger-compact": {
+      "server-host-port": "localhost:6831"
+    },
+    "jaeger-binary": {
+      "server-host-port": "localhost:6832"
+    }
+  },
+  "http-server": {
+    "host-port": "localhost:5778"
+  },
+  "auth": {
+    "token-file": "/etc/opt/archsaber/archsaber.token"
+  }
+}
+
+
